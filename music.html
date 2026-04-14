@@ -1,129 +1,219 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Music Interests</title>
-    <style>
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
- 
-        header {
-            background-color: #8dbfe0;
-            color: rgb(255, 255, 255);
-            padding: 20px;
-            text-align: center;
-        }
-        h3{
-            text-align: center;
-        }
-        p{
-            text-align: justify;
-        }
- 
-          .navbar {
-            display: flex;
-            justify-content: center; 
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Interests</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        background-image: url("bleh.jpg");
+        color: #2c3e50;
+    }
+
+    header {
+        background: linear-gradient(135deg, #8dbfe0, #65a7bb);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: #5fa3b8;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        color: white;
+        padding: 14px 18px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .navbar a:hover {
+        background-color: #a0d0d8;
+        border-radius: 5px;
+    }
+
+    /* SECTIONS */
+    section {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+        color: #3b6f8e;
+        margin-top: 0;
+        border-bottom: 2px solid #eef5f9;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        text-align: left; /* Changed to left for side-by-side layout */
+        margin: 0 0 10px 0;
+    }
+
+    p {
+        text-align: justify;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* FLEXBOX LAYOUT FOR SECTIONS */
+    .flex-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    /* SPECIFIC IMAGE STYLES */
+    .main-img, .artist img {
+        flex: 0 0 220px; /* Keeps images at 220px wide */
+        width: 220px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        display: block;
+    }
+
+    .text-content {
+        flex: 1; /* Allows text to fill remaining space */
+    }
+
+    ul, ol {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    footer {
+        text-align: center;
+        background: #5fa3b8;
+        color: white;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 650px) {
+        .flex-group {
+            flex-direction: column;
             align-items: center;
-             overflow: hidden;
-             background-color: #65a7bb;
-}
-
-      .navbar a {
-            font-size: 16px;
-            color: white;
             text-align: center;
-            padding: 14px 16px;
-            font-weight:bold;
-            text-decoration: none;
-}
-
-
-
-       .navbar a:hover {
-           background-color: #a0d0d8;
-}
-
-
-.dropdown-content a:hover {
-  background-color: #a0d0d8;
-}
- 
-        section {
-            padding: 20px;
-            color: #526880;
-            margin: 20px;
-            background-color: white;
-            border-radius: 10px;
         }
- 
-        img {
- 
-            width: 300px;
-            border-radius: 50%;
-            display: block;
-            align-items: center;
-             margin-left: auto;
-              margin-right: auto;
-        }
- 
-        footer {
+        h3, p {
             text-align: center;
-            background-color: #8dbfe0;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
         }
-       
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>My Music Interests!</h1>
-        </header>
-        
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="#description">Description</a>
-        <a href="#genres">Genre</a>
-        <a href="#favorite">Artists</a>
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Music Interests!</h1>
+</header>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#description">Description</a>
+    <a href="#genre">Genre</a>
+    <a href="#favorite">Artists</a>
+</div>
+
+<section id="description">
+    <h2>Short Description</h2>
+    <div class="flex-group">
+        <img src="monga.webp" class="main-img">
+        <div class="text-content">
+            <p>
+                Music has always been present in someone's life. I've loved music since I was a child—singing along even before I could read,
+                dancing and swaying with the rhythm and melody. Even without knowing how to sing or play instruments, simply listening
+                brings me comfort and improves my mood, making music one of my main coping methods.
+            </p>
+        </div>
     </div>
- 
-    <section id="description">
-        <h2>Short description</h2>
-        <img src="monga.webp">
-        <p>Music has always been present in someones life. I've always loved music since I was a little kid. singing along as the music started even though I couldn't read at the time, dancing, swaying along with the beat and melody as it resonates. I truly loved listening to music despite my lack of ability to play an instrument or sing. Just by listening, my mood improves significantly making it one of my coping methods.</p>
-    </section>
- 
-    <section id="genre">
-        <h2>Genres I like!:</h2>
-        <ol>
+</section>
+
+<section id="genre">
+    <h2>Genres I Like</h2>
+    <ol>
         <li>Pop Music</li>
         <li>Indie Pop</li>
         <li>Musicals</li>
         <li>Rock</li>
-        </ol>
-    </section>
- 
-    <section id="favorite">
-        <h2>Favorite Artists!</h2>
+    </ol>
+</section>
+
+<section id="favorite">
+    <h2>Favorite Artists</h2>
+
+    <div class="artist flex-group">
         <img src="sabrinaaa.jpg">
-        <h3>Sabrina Carpenter</h3>
-        <p>Sabrina Carpenter has become one of my favorite artists lately, and I find myself constantly replaying her songs because of how bold, confident, and expressive they are. What really stands out to me is how her music embraces and celebrates a woman's sexuality in a way that feels empowering rather than limiting. She isn't afraid to own her femininity or lean into her sex appeal, and that confidence comes through strongly in both her lyrics and overall style.</p>
-        <p>Her songs can be a bit controversial since they often include suggestive or openly sexual themes, but I see that as part of her artistic freedom and honesty. Instead of holding back, she chooses to express herself unapologetically, which makes her music feel more real and relatable to listeners who appreciate that kind of openness. At the same time, her tracks are incredibly catchy, with melodies and hooks that stay in your head long after listening. That combination of bold messaging and addictive sound is what keeps me coming back to her music again and again.</p>
+        <div class="text-content">
+            <h3>Sabrina Carpenter</h3>
+            <p>
+                Sabrina Carpenter has become one of my favorite artists lately. Her music feels bold, confident, and expressive.
+                What stands out is how she embraces femininity and sexuality in an empowering way. Her songs may be controversial,
+                but they feel honest and unapologetic.
+            </p>
+        </div>
+    </div>
+
+    <div class="artist flex-group">
         <img src="themarias.jpg">
-        <h3>The Marias</h3>
-        <p>The Marías have always been one of my favorite artists because of how deeply their dreamy pop sound resonates with me emotionally. Their music has this soft, almost hypnotic quality that makes it feel very personal and immersive, like you're being pulled into a calm and intimate atmosphere every time you listen.
-           Most of their songs lean more toward ballads, which adds to that emotional depth. There's a certain vulnerability in their sound that makes it easy to connect with, especially during quiet or reflective moments.</p>
+        <div class="text-content">
+            <h3>The Marías</h3>
+            <p>
+                The Marías create dreamy pop music that feels emotional and immersive. Their soft, almost hypnotic sound
+                creates a calm and intimate atmosphere. Their ballad-heavy style adds depth and makes their songs perfect
+                for quiet or reflective moments.
+            </p>
+        </div>
+    </div>
+
+    <div class="artist flex-group">
         <img src="will wood.webp">
-        <h3>Will Wood</h3>
-        <p>Will Wood is one of those artists whose music instantly stands out to me because of its mischievous and upbeat energy. His songs have this quirky, almost chaotic charm that makes them incredibly fun and unpredictable to listen to. There's always something going on whether it's the playful lyrics, theatrical delivery, or sudden changes in sound that keeps each track interesting from start to finish.
-           What I really enjoy is how his music feels both funky and expressive at the same time. The rhythms are lively, the melodies are catchy, and there's a sense of personality in every song that makes it feel unique. It's the kind of music that doesn't take itself too seriously, yet still manages to leave a strong impression. Whenever I listen to his songs, they instantly boost my mood and make the whole experience feel more energetic and entertaining.</p>
+        <div class="text-content">
+            <h3>Will Wood</h3>
+            <p>
+                Will Wood’s music stands out because of its quirky, chaotic, and upbeat energy. His songs are playful,
+                theatrical, and unpredictable, making them fun to listen to. His unique style always brings excitement whenever I listen.
+            </p>
+        </div>
+    </div>
+
+    <div class="artist flex-group">
         <img src="newjeanss.jpg">
-        <h3>New Jeans</h3>
-        <p>NewJeans has quickly become one of my favorite groups because of how unique and refreshing their music feels. Their sound leans into a soft, dreamy mix of pop and R&B, often inspired by late '90s and early 2000s vibes, which gives their songs a nostalgic yet modern feel . Unlike louder or more intense K-pop styles, their music feels more relaxed and natural, which makes it easy to listen to anytime.
-           What I really like about them is how emotionally comforting their songs are. There's something very gentle and almost effortless in the way they present their music it doesn't feel forced or overly dramatic, but instead calm and sincere. Their tracks often explore themes like young love, emotions, and everyday experiences, which makes them feel relatable and easy to connect with.</p>
-    </section>
-    </body>
+        <div class="text-content">
+            <h3>New Jeans</h3>
+            <p>
+                NewJeans has a refreshing and unique sound that blends pop and R&B with nostalgic influences.
+                Their music feels soft, relaxed, and emotionally comforting. Their themes of youth make their songs easy to connect with.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Alexandra Estrella</p>
+</footer>
+
+</body>
 </html>
